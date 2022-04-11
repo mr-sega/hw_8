@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  site:
+    image: php:8.1-apache
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "80:80"
+
+  composer:
+    image: composer:2.3.2
+    volumes:
+      - .:/app
